@@ -27,12 +27,12 @@ public class StoreCategoryImpl implements StoreCategoryService {
     }
 
     @Override
-    public void deleteCategory(String id) {
+    public void deleteCategory(int id) {
         storeCategoryRepo.deleteById(id);
     }
 
     @Override
-    public Optional<StoreCategory> findCategoryById(String id) {
+    public Optional<StoreCategory> findCategoryById(int id) {
         return storeCategoryRepo.findById(id);
     }
 

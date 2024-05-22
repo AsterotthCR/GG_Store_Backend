@@ -9,7 +9,8 @@ import java.util.Optional;
 public interface StoreCategoryService {
     public void createCategory(StoreCategory storeCategory);
     public void updateCategory(StoreCategory storeCategory);
-    public void deleteCategory(String id);
-    public Optional<StoreCategory> findCategoryById(String id);
+    public void deleteCategory(int id);
+    public Optional<StoreCategory> findCategoryById(int id);
     public List<StoreCategory> findAllCategories();
+
 }

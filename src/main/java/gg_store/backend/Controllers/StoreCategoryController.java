@@ -28,13 +28,13 @@ public class StoreCategoryController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteCategory(@PathVariable String id) {
+    public ResponseEntity<String> deleteCategory(@PathVariable int id) {
         categoryService.deleteCategory(id);
         return new ResponseEntity<>("Categoría eliminada exitosamente", HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<StoreCategory> findCategoryById(@PathVariable String id) {
+    public ResponseEntity<StoreCategory> findCategoryById(@PathVariable int id) {
         Optional<StoreCategory> category = categoryService.findCategoryById(id);
         return category.map(ResponseEntity::ok)
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
