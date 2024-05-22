@@ -1,5 +1,6 @@
 package gg_store.backend.services.servicesImpl;
 
+import gg_store.backend.core.dtos.Role;
 import gg_store.backend.entities.StoreUser;
 import gg_store.backend.repositories.StoreUserRepo;
 import gg_store.backend.services.StoreUserService;
@@ -52,7 +53,6 @@ public class StoreUserImpl implements StoreUserService {
                 .firstName(storeUser.getFirstName())
                 .lastName(storeUser.getLastName())
                 .username(storeUser.getUsername())
-                .email(storeUser.getEmail())
                 .build();
     }
 
@@ -60,9 +60,8 @@ public class StoreUserImpl implements StoreUserService {
         StoreUser.StoreUserBuilder userBuilder = StoreUser
                 .builder()
                 .username(storeUser.getUsername())
-                .role((byte)1)
+                .role(Role.USER)
                 .password(storeUser.getPassword())
-                .email(storeUser.getEmail())
                 .zipcode(storeUser.getZipcode())
                 .firstName(storeUser.getFirstName())
                 .lastName(storeUser.getLastName());

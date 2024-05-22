@@ -22,8 +22,7 @@ public class StoreProduct {
     private String description;
     private float price;
     private String image;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(referencedColumnName = "id")
+    @ManyToOne(optional = false,cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private StoreCategory category;
     private int stock;
 

@@ -15,10 +15,7 @@ import org.hibernate.annotations.UuidGenerator;
 
 public class StoreCategory {
     @Id
-    @UuidGenerator
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String name;
-
-    @OneToOne(mappedBy = "category")
-    private StoreProduct product;
 }

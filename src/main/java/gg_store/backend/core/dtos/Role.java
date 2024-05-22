@@ -1,2 +1,6 @@
-package gg_store.backend.core.dtos;public enum Role {
+package gg_store.backend.core.dtos;
+
+public enum Role {
+    ADMIN,
+    USER
 }
