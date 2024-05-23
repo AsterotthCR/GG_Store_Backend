@@ -1,10 +1,7 @@
 package gg_store.backend.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.util.Date;
@@ -15,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Data
 @Builder
+@ToString(exclude = "storeUser")
 public class StoreCart {
 
     @Id

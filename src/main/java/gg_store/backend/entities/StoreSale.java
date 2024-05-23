@@ -26,6 +26,6 @@ public class StoreSale {
     private Date date;
     @ManyToOne(optional = false,cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private StoreUser storeUser;
-    @ManyToOne(optional = false,cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
+    @ManyToOne(optional = false,cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private StoreBuyDetail buyDetails;
 }
