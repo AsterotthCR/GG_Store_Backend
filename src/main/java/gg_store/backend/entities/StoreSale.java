@@ -7,7 +7,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.UuidGenerator;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 @Entity
 @AllArgsConstructor
@@ -23,4 +26,6 @@ public class StoreSale {
     private Date date;
     @ManyToOne(optional = false,cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private StoreUser storeUser;
+    @ManyToOne(optional = false,cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
+    private StoreBuyDetail buyDetails;
 }

@@ -53,6 +53,7 @@ public class StoreUserImpl implements StoreUserService {
                 .firstName(storeUser.getFirstName())
                 .lastName(storeUser.getLastName())
                 .username(storeUser.getUsername())
+                .role(Role.USER)
                 .build();
     }
 

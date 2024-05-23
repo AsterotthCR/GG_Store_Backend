@@ -7,5 +7,4 @@ import java.util.List;
 public interface StoreBuyDetailService {
     public void createNewDetail(StoreBuyDetail storeBuyDetail);
     public void updateDetails(StoreBuyDetail storeBuyDetail);
-    public List<StoreBuyDetail> findBySaleId(String saleId);
 }

@@ -20,9 +20,5 @@ public class StoreBuyDetaillmpl implements StoreBuyDetailService {
     public void updateDetails(StoreBuyDetail storeBuyDetail) {
         storeBuyDetailRepo.save(storeBuyDetail);
     }
-    @Override
-    public List<StoreBuyDetail> findBySaleId(String saleId) {
-        return storeBuyDetailRepo.findByStoreSale_Id(saleId);
-    }
 }
 

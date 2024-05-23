@@ -31,9 +31,4 @@ public class StoreBuyDetailController {
         return new ResponseEntity<>("Detalle de compra actualizado exitosamente", HttpStatus.OK);
     }
 
-    @GetMapping("/sale/{saleId}")
-    public ResponseEntity<List<StoreBuyDetail>> findBySaleId(@PathVariable String saleId) {
-        List<StoreBuyDetail> details = buyDetailService.findBySaleId(saleId);
-        return new ResponseEntity<>(details, HttpStatus.OK);
-    }
 }

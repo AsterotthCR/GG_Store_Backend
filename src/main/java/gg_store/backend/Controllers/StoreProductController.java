@@ -53,7 +53,7 @@ public class StoreProductController{
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    @GetMapping("/{category}")
+    @GetMapping("by_category/{category}")
     public ResponseEntity<List<StoreProduct>> getProductsByCategory(@PathVariable String category) {
         List<StoreProduct> products = productService.getProductsByCategory(category);
         return new ResponseEntity<>(products, HttpStatus.OK);

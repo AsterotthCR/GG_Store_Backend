@@ -9,5 +9,4 @@ import java.util.List;
 
 @Repository
 public interface StoreBuyDetailRepo extends JpaRepository<StoreBuyDetail, String> {
-    List<StoreBuyDetail> findByStoreSale_Id(String storeSale);
 }
